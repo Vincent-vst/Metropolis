@@ -16,9 +16,10 @@
     <body>
         <h1>Film</h1>
         <div>
-            {{ dump(films) }}
             {% for film in films %}
-                {{ dump(film) }}
+                <h3>{{ film.getNom() }}</h3>
+                <p>{{ film.getNote() }}</p>
+                <p>{{ film.getDescription() }}</p>
             {% endfor %}
         </div>
     </body>

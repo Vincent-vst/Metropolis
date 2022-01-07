@@ -47,6 +47,9 @@ class formFilm extends AbstractController{
             $film->setDescription($data['description']);
             $em->persist($film);
             $em->flush();
+
+
+            return $this->redirectToRoute('home');
         }
 
         return $this->render('form/form.html.twig', [
