@@ -16,7 +16,10 @@
     <body>
         <h1>Film</h1>
         <div>
-            {{ films }}
+            {{ dump(films) }}
+            {% for film in films %}
+                {{ dump(film) }}
+            {% endfor %}
         </div>
     </body>
 </html>
