@@ -26,26 +26,4 @@ class homeFilm extends AbstractController
     }
 
 
-    /* public function returnFilm(Film $doctrine ) : Response{ */
-    /*     $filmRepository = $doctrine->getRepository(Film::class); */
-    /*     $film = $filmRepository->findAll(); */
-
-    /*     return $this->render('base.html.twig', */
-    /*         ['films' => $film] */
-    /*     ); */
-    /* } */
-
-
-    /* public function hello(){ */
-    /*     /1* return new Response("hello world"); *1/ */
-    /*     $film = new Film(); */ 
-    /*     $film->setNom('pulp fiction'); */ 
-    /*     $film->setDescription('film cool'); */
-    /*     $film->setNote(3); */
-    /*     /1* return new Response($film->getNom()); *1/ */
-    /*     return $this->render('base.html.twig', [ */
-    /*         "film" => $film */
-    /*     ]); */
-    /* } */
-
 }
