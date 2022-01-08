@@ -14,11 +14,24 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request; 
 use Symfony\Component\HttpFoundation\Response;
 
+use aharen\OMDbAPI;
+
+/* $omdb = new OMDbAPI($api_key, $image_host, $assoc); */
+
+
 class formFilm extends AbstractController{
 
     /**
-     * @Route("/form", name="formulaire")
+     * @Route("/form", name="form")
      */
+
+
+    public function search () {
+        /* $omdb = new OMDbAPI($api_key, $image_host, $assoc); */
+        /* $omdb = new OMDbAPI(); */
+
+/* $omdb->search($keyword, $type, $year); */
+    }
 
 
     public function create (Request $request, EntityManagerInterface $em): Response{
@@ -57,6 +70,7 @@ class formFilm extends AbstractController{
         ]);
         /* return new Response("hello world"); */ 
     }
+
 }
 
 

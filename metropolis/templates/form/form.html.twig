@@ -4,7 +4,13 @@
     <body>
         <h1>Formulaire</h1>
 
-        {{ form(formFilm) }}
+        {{ form_start(formFilm) }}
+            <div>{{form_row(formFilm.nom)}}</div>
+            <div>{{form_row(formFilm.note)}}</div>
+            <div>{{form_row(formFilm.description)}}</div>
+        {{ form_end(formFilm) }}
+        
+        <a href="{{ path('home') }}">Retour à la liste des films</a>
     </body>
 
 
