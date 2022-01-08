@@ -17,9 +17,9 @@
         <h1>Film</h1>
         <div>
             {% for film in films %}
-                <h3>{{ film.getNom() }}</h3>
-                <p>{{ film.getNote() }}</p>
-                <p>{{ film.getDescription() }}</p>
+            <h3><a href="{{ path('description', {'id':film.Id}) }}">{{ film.getNom() }}</a></h3>
+                <p>Note : {{ film.getNote() }}</p>
+                <p>Description : {{ film.getDescription() }}</p>
             {% endfor %}
         </div>
     </body>
