@@ -12,7 +12,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request; 
 use Symfony\Component\HttpFoundation\Response;
-
+use App\Controller\searchFilm;
 
 /* $omdb = new OMDbAPI($api_key, $image_host, $assoc); */
 
@@ -24,15 +24,9 @@ class formFilm extends AbstractController{
      */
 
 
-    /* public function search () { */
-    /*     /1* $omdb = new OMDbAPI($api_key, $image_host, $assoc); *1/ */
-    /*     /1* $omdb = new OMDbAPI(); *1/ */
-
-/* /1* $omdb->search($keyword, $type, $year); *1/ */
-    /* } */
-
-
     public function create (Request $request, EntityManagerInterface $em): Response{
+
+
         $form = $this->createFormBuilder()
              ->add('nom', TextType::class)
              ->add('note', IntegerType::class, [
@@ -42,27 +36,31 @@ class formFilm extends AbstractController{
                 ],               
              ])
              /* ->add('description', TextareaType::class ) */
-             ->add('submitDescription', SubmitType::class, ['label'=>'Rechercher une description'])
+             /* ->add('submitDescription', SubmitType::class, ['label'=>'Rechercher une description']) */
              ->add('submitForm', SubmitType::class, ['label'=>'Ajouter un film'])
              ->getForm()
         ; 
 
         $form ->handleRequest($request);
 
-        /* if($form->isSubmitted() && $form->isValid()){ */
-
-        /*     $data=$form->getData(); */
-
-        /*     $film = new Film; */ 
-        /*     $film->setNom($data['nom']); */
-        /*     $film->setNote($data['note']); */
-        /*     $film->setDescription($data['description']); */
-        /*     $em->persist($film); */
-        /*     $em->flush(); */
 
 
-        /*     return $this->redirectToRoute('home'); */
-        /* } */
+
+        if($form->isSubmitted() && $form->isValid()){
+
+            
+            $data=$form->getData();
+
+            $description = searchFilm::search($data['nom']);
+
+            $film = new Film; 
+            $film->setNom($data['nom']);
+            $film->setNote($data['note']);
+            $film->setDescription($description);
+            $em->persist($film);
+            $em->flush();
+            return $this->redirectToRoute('home');
+        }
 
         return $this->render('form/form.html.twig', [
             'formFilm' => $form->createView()
