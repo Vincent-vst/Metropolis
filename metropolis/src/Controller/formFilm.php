@@ -14,7 +14,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use App\Controller\searchFilm;
 
-/* $omdb = new OMDbAPI($api_key, $image_host, $assoc); */
 
 
 class formFilm extends AbstractController{
@@ -48,6 +47,13 @@ class formFilm extends AbstractController{
             $data=$form->getData();
            
             $description = searchFilm::search($data['nom']);
+
+            if (is_null($description)){
+                /* throw $this->createNotFoundException("Sorry, we couldn't retrieve the desription for this movie"); */
+                /* return $this->redirectToRoute('../../templates/error/filmNotFound.html.twig'); */
+                /* echo "error, film not found"; */
+                $description = "error, film not found";
+            }
 
             $film = new Film; 
             $film->setNom($data['nom']);

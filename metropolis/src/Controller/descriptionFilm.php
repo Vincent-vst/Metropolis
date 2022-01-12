@@ -4,12 +4,14 @@
 namespace App\Controller;
 
 use App\Entity\Film;
+use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
-
+use Symfony\Component\Form\Extension\Core\Type\ButtonType;
+use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\HttpFoundation\Response;
-/* echo "uwu" */
 
 
    class descriptionFilm extends AbstractController{
@@ -17,23 +19,17 @@ use Symfony\Component\HttpFoundation\Response;
      * @Route("/details/{id}", name="description")
      */
 
-/*       public function description($id) : Response { */
-/*          /1* $nom = film.getNom(); *1/ */ 
-/*          return new Response( */
-/*             $id */ 
-/*             /1* 'hello' *1/ */
-/*         ); */
-/*       } */
 
-    public function show(ManagerRegistry $doctrine, $id): Response {
+    public function show( ManagerRegistry $doctrine, $id): Response {
         $film = $doctrine->getRepository(Film::class)->find($id);
-        /* return new Response( */
-        /*    $film */
-        /* ); */ 
+
+         /* $builder */
+         /*    ->add('deleteFilm', ButtonType::class) */
+         /* ; */
 
         return $this->render('details/description.html.twig', ['film' => $film]);
-    }
 
+    }
 
 
    }
