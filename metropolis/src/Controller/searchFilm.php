@@ -2,14 +2,20 @@
 namespace App\Controller;
 
 
-
 class searchFilm  {
     public static function search ($nomFilm) {
         $descriptionFilm = 'lorem';
-        /* $omdb = new OMDbAPI($api_key, $image_host, $assoc); */
-        /* $omdb = new OMDbAPI(); */
+      $nomFilm = 'PulpFiction';
+      $apiKey = '3830c4bd'; 
+       
+      $url = "http://www.omdbapi.com/?apikey=" . $apiKey . "&t=" . $nomFilm;
+       
+      $response = file_get_contents($url);
 
-/* $omdb->search($keyword, $type, $year); */
+
+      $plot = json_decode($response,true)["Plot"];
+
+
         return $descriptionFilm;
     }
 

@@ -1,5 +1,7 @@
 {
     "require": {
-        "aharen/omdbapi": "^2.1"
+        "aharen/omdbapi": "^2.1",
+        "immucahit/omdbapi": "^2.0",
+        "symfony/http-client": "^6.0"
     }
 }
