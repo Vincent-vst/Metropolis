@@ -7,9 +7,10 @@
         {{ form_start(formFilm) }}
             <div>{{form_row(formFilm.nom)}}</div>
             <div>{{form_row(formFilm.note)}}</div>
-            <!-- <div>{#{form_row(formFilm.submitDescription)}#}</div> -->
             <div>{{form_row(formFilm.submitForm)}}</div>
         {{ form_end(formFilm) }}
+
+        {#{formFilm.description}#}
         
         <a href="{{ path('home') }}">Retour à la liste des films</a>
     </body>

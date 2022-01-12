@@ -35,9 +35,7 @@ class formFilm extends AbstractController{
                 'max' => 10
                 ],               
              ])
-             /* ->add('description', TextareaType::class ) */
-             /* ->add('submitDescription', SubmitType::class, ['label'=>'Rechercher une description']) */
-             ->add('submitForm', SubmitType::class, ['label'=>'Ajouter un film'])
+             ->add('submitForm', SubmitType::class, ['label'=>'Add film'])
              ->getForm()
         ; 
 
@@ -50,7 +48,7 @@ class formFilm extends AbstractController{
 
             
             $data=$form->getData();
-
+           
             $description = searchFilm::search($data['nom']);
 
             $film = new Film; 
