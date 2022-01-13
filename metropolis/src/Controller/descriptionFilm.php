@@ -10,6 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Response;
 
 
@@ -24,6 +25,7 @@ use Symfony\Component\HttpFoundation\Response;
         $film = $doctrine->getRepository(Film::class)->find($id);
 
         $form = $this->createFormBuilder()
+            ->add('password', TextType::class) 
              ->add('submitForm', SubmitType::class, ['label'=>'delete film '])
              ->getForm()
         ; 
@@ -32,13 +34,13 @@ use Symfony\Component\HttpFoundation\Response;
         $form ->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
-            $em->remove($film); 
-            $em ->flush(); 
-            return $this->redirectToRoute('home');
-        }
-
-
-   
+            $data=$form->getData(); 
+            if($data['password']=="1234"){
+               $em->remove($film); 
+               $em ->flush(); 
+               return $this->redirectToRoute('home');
+            } 
+           }
 
         return $this->render('details/description.html.twig', ['film' => $film, 'deleteFilm' => $form->createView()]);
 

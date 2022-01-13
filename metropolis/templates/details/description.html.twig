@@ -4,9 +4,16 @@
     <body>
         <h1>Film Description</h1>
         <p>{{ film.getNom() }}</p>
-
         <p>{{ film.getDescription() }}</p>
         <p>{{ film.getNote() }}</p>
+        
+
+        {{ form_start(deleteFilm) }}
+            <div>{{form_row(deleteFilm.password)}}</div>
+            <div>{{form_row(deleteFilm.submitForm)}}</div>
+            
+        {{ form_end(deleteFilm) }}
+
 
         <a href="{{ path('home') }}">Retour à la liste des films</a>
 

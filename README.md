@@ -39,3 +39,8 @@ function
 ```
 
 Also change the name of the files 
+
+Correct bug of Film with spaces in it. i.e : "pulpfiction" works but "pulp fiction" doesn't
+
+Si on trouve le film c'est bon, sinon on affiche un message d'erreur à l'utilisateur,
+(l’appel à l’api et la récupération de la description du film doit être faite dans un service)
