@@ -23,10 +23,6 @@ use Symfony\Component\HttpFoundation\Response;
     public function show( ManagerRegistry $doctrine, $id): Response {
         $film = $doctrine->getRepository(Film::class)->find($id);
 
-         /* $builder */
-         /*    ->add('deleteFilm', ButtonType::class) */
-         /* ; */
-
         return $this->render('details/description.html.twig', ['film' => $film]);
 
     }
