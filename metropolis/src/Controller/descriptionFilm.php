@@ -20,10 +20,27 @@ use Symfony\Component\HttpFoundation\Response;
      */
 
 
-    public function show( ManagerRegistry $doctrine, $id): Response {
+    public function show( ManagerRegistry $doctrine, $id, Request $request): Response {
         $film = $doctrine->getRepository(Film::class)->find($id);
 
-        return $this->render('details/description.html.twig', ['film' => $film]);
+        $form = $this->createFormBuilder()
+             ->add('submitForm', SubmitType::class, ['label'=>'delete film'])
+             ->getForm()
+        ; 
+
+        if($form->isSubmitted() && $form->isValid()){
+
+            return $this->redirectToRoute('home');
+        }
+
+        $form ->handleRequest($request);
+
+   
+
+        return $this->render('details/description.html.twig', ['film' => $film, 'deleteFilm' => $form->createView()]);
+        /* return $this->render('form/form.html.twig', [ */
+        /*     'formFilm' => $form->createView() */
+        /* ]); */
 
     }
 
