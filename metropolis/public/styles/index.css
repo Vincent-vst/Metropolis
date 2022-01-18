@@ -12,6 +12,7 @@
 	--background : #262626; 
 	--font : #fefefe; 
 	--description : #545454; 
+	--card-background : #141414; 
 }
 
 *{
@@ -113,3 +114,53 @@ header .menu p {
 	color : black; 
 }
 
+#films {
+	/* border : 1px solid green ; */ 
+	height : 700px;
+	display : grid ;
+	grid-template-columns: repeat(3, 1fr);
+	margin : 50px; 
+}
+
+.film_item {
+	background-color : var(--card-background);
+	display : flex; 
+	flex-direction : column;
+	justify-content : flex-end; 
+	align-items : center; 
+	height : 300px; 
+	width : 250px; 
+}
+
+
+
+/*------------------------------ Footer ------------------------------*/ 
+
+footer{
+	/* border : 1px solid red; */ 
+	height : 100px; 
+	/* position:absolute; */
+	bottom : 0; 
+	margin-top : 300px; 
+	display  : flex; 
+	align-items : flex-end; 
+	justify-content : space-between; 
+}
+
+.left_footer {
+	margin : 0 0 30px 20px ;
+	/* margin : 20px; */
+	color : var(--description);
+}
+
+.right_footer{
+	display : flex; 
+}
+
+footer .icon {
+	margin : 20px; 
+	height : 50px; 
+	width : 50px; 
+	background-color : var(--font);
+	border-radius : 50%;
+}
