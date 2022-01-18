@@ -1,7 +1,115 @@
-*{
-	border : 1px solid red; 
+/* *{ */
+/* 	border : 1px solid red; */ 
+/* } */
+
+/* .films{ */
+/* 	background-color : red; */ 
+/* } */
+
+/*------------------------------ Colors and Fonts ------------------------------*/ 
+
+:root{
+	--background : #262626; 
+	--font : #fefefe; 
+	--description : #545454; 
 }
 
-.films{
-	background-color : red; 
+*{
+	margin : 0;
+	padding : 0;
 }
+
+body {
+	background-color : var(--background);
+}
+
+
+/*------------------------------ Menu ------------------------------*/ 
+
+header{
+	/* border : 1px dashed green; */ 
+	display : flex; 
+	justify-content : space-between; 
+	margin : 20px; 
+	color : var(--font);
+}
+
+header h3{
+	font-size : 20px; 
+}
+
+header .menu {
+	display : flex;
+}
+
+header .menu p {
+	margin-left : 30px; 
+}
+
+
+/*------------------------------ HomePage main ------------------------------*/ 
+
+#main {
+	/* border : 1px solid red; */ 
+	height : 1000px; 
+}
+
+.title {
+	/* border : 1px solid blue; */ 
+	margin-top : 50px; 
+	height : 500px; 
+	display : flex; 
+	/* align-items : space-around; */ 
+	justify-content : center;
+}
+
+.title .text{
+	/* border : 1px dashed yellow; */ 
+	height : 400px; 
+	width : 400px; 
+	display : flex ; 
+	flex-direction : column; 
+	/* justify-content : center; */ 
+}
+
+.title .text h3{
+	margin-top : 100px; 
+	color : var(--font);
+	font-size : 40px; 
+}
+
+.title .text .description {
+	color : var(--description);
+	margin-top : 20px; 
+}
+
+.title .image{
+	/* border : 1px dashed orange; */ 
+	width : 400px; 
+	height : 400px; 
+}
+
+.title .text .button {
+	margin-top : 50px; 
+	border : 1px solid white; 
+	width : 250px; 
+	height : 50px; 
+	border-radius : 25px; 
+	display : flex; 
+	justify-content : center; 
+	align-items : center; 
+}
+
+.title .text .button:hover{
+	background-color : var(--font);
+}
+
+.title .text .button a {
+	text-decoration : none; 
+	color : var(--font);
+}
+
+.title .text .button a:hover{
+	color : black; 
+}
+
