@@ -22,6 +22,9 @@ Nom film | description | note
 > utiliser des controllers 
 > utilisation de formulaires 
 
+Password to delete films is `1234`
+
+
 ## TODO    
 
 Change all 
@@ -44,3 +47,6 @@ Correct bug of Film with spaces in it. i.e : "pulpfiction" works but "pulp ficti
 
 Si on trouve le film c'est bon, sinon on affiche un message d'erreur à l'utilisateur,
 (l’appel à l’api et la récupération de la description du film doit être faite dans un service)
+
+
+
