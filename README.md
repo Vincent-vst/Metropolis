@@ -8,6 +8,12 @@ It's also using IMDBApi in order to fill the description field.
 
 Password to delete films is `1234`.   
 
+__commands :__   
+```` 
+> npm run dev  # or npm run watch 
+> symfony server:start -d 
+````
+
 
 ## Consignes     
   
