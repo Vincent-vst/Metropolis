@@ -351,3 +351,75 @@ footer .icon img{
 	text-decoration : none; 
 	color : var(--font);
 }
+
+
+
+/*------------------------------ Description Page ------------------------------*/ 
+
+
+#description_panel {
+	/* border : 1px solid red;  */
+	height : 500px; 
+	display : flex; 
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin : 80px; 
+}
+
+.delete_form{
+	display: flex;
+	flex-direction: column;
+	/* justify-content: flex-end; */
+	align-items: flex-start;
+	/* border : 1px dashed green;  */
+	width : 500px; 
+	color : var(--description);
+}
+
+.delete_form input {
+	/* border : 2px solid red;  */
+	background-color: var(--card-background);
+	margin : 10px; 
+	border : 1px solid var(--phone-contour);
+	width : 50px; 
+	/* border-color: var(--phone-contour); */
+	border-radius: 10px;
+	color : var(--font);
+	outline : none; 
+}
+
+.delete_form button {
+	/* border : 1px solid red;  */
+	background-color: var(--card-background);
+	border : 1px solid white; 
+	border-radius: 20px;
+	padding: 5px 10px 5px 10px;
+	color : var(--font);
+}
+
+.delete_form button:hover{
+	background-color: var(--font);
+	color : var(--background);
+}
+
+#description_panel h1{
+	font-size: 100px;
+	color : var(--font);
+
+}
+
+.description{
+	display: flex;
+	flex-direction: column;
+	/* justify-content: flex-end; */
+	align-items: flex-end;
+	/* border : 1px dashed green;  */
+	width : 500px; 
+}
+
+.description p {
+	/* border : 1px dashed yellow;  */
+	width: 300px ;
+	color : var(--description);
+}
