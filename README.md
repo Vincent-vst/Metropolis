@@ -39,9 +39,9 @@ Ce qu’il faut réaliser: Il nous faut une BDD avec un seule table, donc une se
 - [ ] change file name.  
 - [ ] fix search bug with blank space  
 - [x] add error when film not found 
-- [ ] add .sql to this repo 
+- [x] add .sql to this repo 
 - [ ] move API in a service
-- [ ] order film display
+- [x] order film display
 - [x] add user email to the form
 - [ ] admin button should be in a symfony parameter
 

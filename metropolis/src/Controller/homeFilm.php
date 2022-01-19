@@ -17,8 +17,9 @@ class homeFilm extends AbstractController
 
     public function show(ManagerRegistry $doctrine): Response
     {
-        $film = $doctrine->getRepository(Film::class)->findAll();
-
+        // $film = $doctrine->getRepository(Film::class)->findAll();
+        $film = $doctrine->getRepository(Film::class)->findBy([], ['nom' => 'ASC']);
+        
 
         return $this->render('base.html.twig', ['films' => $film]);
     }
