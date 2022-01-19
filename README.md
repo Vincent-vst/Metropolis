@@ -44,5 +44,7 @@ Ce qu’il faut réaliser: Il nous faut une BDD avec un seule table, donc une se
 - [x] order film display
 - [x] add user email to the form
 - [ ] admin button should be in a symfony parameter
+- [ ] add csv import  
+- [ ] add stats  
 
 

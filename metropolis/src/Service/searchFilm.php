@@ -1,5 +1,6 @@
 <?php
-namespace App\Controller;
+namespace App\Service;
+// namespace App\Controller;
 
 
 class searchFilm  {

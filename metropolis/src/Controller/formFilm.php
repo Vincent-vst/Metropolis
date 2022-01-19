@@ -12,7 +12,8 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request; 
 use Symfony\Component\HttpFoundation\Response;
-use App\Controller\searchFilm;
+// use App\Controller\searchFilm;
+use App\Service\searchFilm;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 
 class formFilm extends AbstractController
