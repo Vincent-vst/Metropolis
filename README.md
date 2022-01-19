@@ -1,4 +1,31 @@
-## Consignes   
+## About     
+
+School project that can {display, add, remove} films.   
+It's also using IMDBApi in order to fill the description field.  
+
+
+## Usage 
+
+Password to delete films is `1234`.  
+
+
+## Installation   
+
+__installation :__
+```
+> composer install
+> npm install 
+```
+
+__usage :__   
+```` 
+> symfony server:start -d 
+> npm run dev  # or npm run watch 
+````
+
+
+## Consignes     
+  
 Gestion de bibliothèques de films 
 
 Ils faut une BDD avec une seule table : ex : 
@@ -22,7 +49,6 @@ Nom film | description | note
 > utiliser des controllers 
 > utilisation de formulaires 
 
-Password to delete films is `1234`
 
 
 ## TODO    
@@ -48,5 +74,5 @@ Correct bug of Film with spaces in it. i.e : "pulpfiction" works but "pulp ficti
 Si on trouve le film c'est bon, sinon on affiche un message d'erreur à l'utilisateur,
 (l’appel à l’api et la récupération de la description du film doit être faite dans un service)
 
-
+Before submit, add the .sql file to the git... 
 
