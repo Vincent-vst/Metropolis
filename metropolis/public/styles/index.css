@@ -12,7 +12,8 @@
 	--background : #262626; 
 	--font : #fefefe; 
 	--description : #545454; 
-	--card-background : #141414; 
+	--card-background : #222222; 
+	--phone-contour : #1b1b1b; 
 }
 
 *{
@@ -51,8 +52,8 @@ header .menu p {
 /*------------------------------ HomePage main ------------------------------*/ 
 
 #main {
-	/* border : 1px solid red; */ 
-	height : 1000px; 
+	/* border : 1px solid red;  */
+	height : 1200px; 
 }
 
 .title {
@@ -100,7 +101,7 @@ header .menu p {
 	-webkit-transform: scale(1.10);
 }
 
-.title .text .button {
+.title .text .button a {
 	margin-top : 50px; 
 	border : 1px solid white; 
 	width : 250px; 
@@ -109,30 +110,63 @@ header .menu p {
 	display : flex; 
 	justify-content : center; 
 	align-items : center; 
-}
-
-.title .text .button:hover{
-	background-color : var(--font);
-}
-
-.title .text .button a {
 	text-decoration : none; 
 	color : var(--font);
 }
 
 .title .text .button a:hover{
+	background-color : var(--font);
 	color : black; 
 }
 
+/* .title .text .button a {
+
+}
+
+.title .text .button a:hover{
+	color : black; 
+} */
+
+.line_parent{
+	display: flex;
+	justify-content: center;
+}
+
+.line{
+	width: 300px;
+	border : 1px solid var(--description);
+}
+
+.film_parent{
+	/* border : 1px solid yellow; */
+	margin-top : 50px; 
+	display : flex; 
+	/* justify-content: space-around; */
+	justify-content: center;
+}
+
 #films {
-	/* border : 1px solid green ; */ 
-	height : 700px;
-	display : grid ;
-	grid-template-columns: repeat(3, 1fr);
-	margin : 50px; 
+	margin-top :  50px;
+	border : 3px solid var(--phone-contour) ; 
+	-webkit-box-shadow: 0px 0px 28px -7px #000000; 
+	box-shadow: 0px 0px 28px -7px #000000;
+	border-radius: 20px;
+	height : 500px;
+	width : 300px; 
+	/* margin : 50px;  */
+	display: flex;
+	/* justify-content: center; */
+	align-items: center;
+	flex-direction: column;
+	overflow: scroll;
+	/* margin-right : 80px;  */
+	/* display: flex; */
 }
 
 .film_item {
+	/* margin-right : 50px;  */
+	/* border : 1px solid red;  */
+	margin-top: 30px;
 	background-color : var(--card-background);
 	display : flex; 
 	flex-direction : column;
@@ -142,16 +176,71 @@ header .menu p {
 	width : 250px; 
 }
 
+.film_item h3 a {
+	text-decoration: underline;
+	color : var(--font);
+	font-size: 25px;
+}
+
+.film_item p {
+	color : var(--font); 
+
+}
+
+.film_item img{
+	height : 300px; 
+	width : auto; 
+}
+
+.text_parent{
+	/* border : 1px solid green; */
+	margin-left : 80px; 
+	width : 400px; 
+}
+
+.text_description h3{
+	margin-top: 100px ;
+	color : var(--font);
+	font-size : 30px; 
+}
+
+.text_description p {
+	margin-top : 30px; 
+	color : var(--description);
+}
+
+.text_description span {
+	margin-top : 50px; 
+	background-color: white;
+	width : 100px; 
+	height : 30px; 
+	border-radius : 25px; 
+	display : flex; 
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+.image_description{
+	margin-top : 50px; 
+	margin-left : 50px; 
+	/* border : 1px solid red;  */
+	height: 200px;
+	width : auto;
+}
 
 
 /*------------------------------ Footer ------------------------------*/ 
 
+
+
 footer{
-	/* border : 1px solid red; */ 
+	/* border : 1px solid red;  */
 	height : 100px; 
 	/* position:absolute; */
 	bottom : 0; 
-	margin-top : 300px; 
+	/* margin-top : 300px;  */
 	display  : flex; 
 	align-items : flex-end; 
 	justify-content : space-between; 
@@ -171,6 +260,11 @@ footer .icon {
 	margin : 20px; 
 	height : 50px; 
 	width : 50px; 
-	background-color : var(--font);
+	/* background-color : var(--description); */
 	border-radius : 50%;
+}
+
+footer .icon img{
+	height : 50px; 
+	width : auto; 
 }

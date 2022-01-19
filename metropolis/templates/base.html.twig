@@ -30,24 +30,39 @@
                     <img src='images/model3.png'>
                 </div>
             </div>
-            <div id='films'>
-                {% for film in films %}
-                    <div class='film_item'>
-                        <h3><a href="{{ path('description', {'id':film.Id}) }}">{{ film.getNom() }}</a></h3>
-                        <p>Note : {{ film.getNote() }}</p>
-                        <!-- <p>Description : {#{ film.getDescription() }#}</p> -->
+            <div class='line_parent'>
+                <div class='line'></div>
+            </div>
+            <div class='film_parent'>
+                <div id='films'>
+                    {% for film in films %}
+                        <div class='film_item'>
+                            <img src='images/model2.png'>
+                            <h3><a href="{{ path('description', {'id':film.Id}) }}">{{ film.getNom() }}</a></h3>
+                            <p>Note : {{ film.getNote() }}</p>
+                            <!-- <p>Description : {#{ film.getDescription() }#}</p> -->
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class='text_parent'>
+                    <div class='text_description'>
+                        <h3>Expandable database</h3>
+                        <p>Click on the movies to see its rank, author and a detailed description</p>
+                        {# <img src='images/model1.png' class='image_description'> #}
+                        <span><div><- scroll me</div></span>
                     </div>
-                {% endfor %}
+                </div>
             </div>
         </div>
+
         <footer>
             <div class='left_footer'>
                 <p>author : vincent</p>
             </div>
             <div class='right_footer'>
-                <div class='icon'></div>
-                <div class='icon'></div>
-                <div class='icon'></div>
+                <div class='icon'><img src='images/icon1.png'></div>
+                <div class='icon'><img src='images/icon2.png'></div>
+                <div class='icon'><img src='images/icon3.png'></div>
             </div>
         </footer>
     </body>
