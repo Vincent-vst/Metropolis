@@ -34,7 +34,7 @@ Ce qu’il faut réaliser: Il nous faut une BDD avec un seule table, donc une se
 
 ## TODO    
 
-- [ ] change all `{}`  
+- [x] change all `{}`  
 - [ ] change file name.  
 - [ ] fix search bug with blank space  
 - [ ] add error when film not found 
