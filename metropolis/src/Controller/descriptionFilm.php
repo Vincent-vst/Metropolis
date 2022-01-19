@@ -38,7 +38,7 @@ use Symfony\Component\HttpFoundation\Response;
         if($form->isSubmitted() && $form->isValid())
         {
             $data=$form->getData(); 
-            if($data['password']=="1234") // move password to symfony parameter
+            if($data['password']==$this->getParameter('code')) // move password to symfony parameter
             {
                $em->remove($film); 
                $em ->flush(); 

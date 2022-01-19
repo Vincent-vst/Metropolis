@@ -40,7 +40,7 @@ Ce qu’il faut réaliser: Il nous faut une BDD avec un seule table, donc une se
 - [ ] fix search bug with blank space  
 - [x] add error when film not found 
 - [x] add .sql to this repo 
-- [ ] move API in a service
+- [x] move API in a service
 - [x] order film display
 - [x] add user email to the form
 - [ ] admin button should be in a symfony parameter
