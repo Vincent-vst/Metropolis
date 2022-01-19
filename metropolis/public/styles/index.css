@@ -334,9 +334,38 @@ footer .icon img{
 	color : var(--font);
 }
 
-.note {
-	margin-top : 30px; 
+.nom input {
+	border : 1px solid black; 
+	margin-left: 10px;
+	background-color: var(--background);
+	border-radius: 10px;
+	height: 25px;
 	color : var(--font);
+}
+
+.note_parent{
+	/* border : 1px solid red;  */
+	display: flex;
+	margin-top : 30px; 
+}
+
+.note {
+	color : var(--font);
+}
+
+.note_parent p {
+	margin-left: 10px;
+	color : var(--description);
+}
+
+.note input{
+	border : 1px solid black; 
+	margin-left: 10px;
+	background-color: var(--background);
+	border-radius: 10px;
+	width : 50px; 
+	height: 25px;
+	color : var(--font); 
 }
 
 #form_panel .button{
@@ -352,6 +381,14 @@ footer .icon img{
 	color : var(--font);
 }
 
+
+
+#form_panel .button button {
+	background-color: #1D1F20;
+	border : none; 
+	text-decoration: underline;
+	color : var(--font);
+}
 
 
 /*------------------------------ Description Page ------------------------------*/ 
