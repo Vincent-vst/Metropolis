@@ -37,11 +37,11 @@ Ce qu’il faut réaliser: Il nous faut une BDD avec un seule table, donc une se
 - [x] change all `{}`  
 - [ ] change file name.  
 - [ ] fix search bug with blank space  
-- [ ] add error when film not found 
+- [x] add error when film not found 
 - [ ] add .sql to this repo 
 - [ ] move API in a service
 - [ ] order film display
-- [ ] add user email to the form
+- [x] add user email to the form
 - [ ] admin button should be in a symfony parameter
 
 

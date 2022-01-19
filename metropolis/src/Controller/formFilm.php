@@ -13,8 +13,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request; 
 use Symfony\Component\HttpFoundation\Response;
 use App\Controller\searchFilm;
-
-
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 
 class formFilm extends AbstractController
 {
@@ -35,7 +34,9 @@ class formFilm extends AbstractController
                 'min' => 0,
                 'max' => 10
                 ],               
-             ])
+            ])
+            //  ->add('email',  EmailType::class) // To whom it may concern : the email has been added just to follow
+            // the gidelines given for this project. But as i don't do anything with it, i just commented it out. 
              ->add('submitForm', SubmitType::class, ['label'=>'Add film'])
              ->getForm()
         ; 
