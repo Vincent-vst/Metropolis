@@ -53,6 +53,11 @@ header .menu p {
 	margin-left : 30px; 
 }
 
+header .menu p a {
+	color : var(--font);
+	text-decoration: none;
+}
+
 
 /*------------------------------ HomePage main ------------------------------*/ 
 

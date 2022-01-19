@@ -3,11 +3,9 @@
 
 namespace App\Controller;
 
-use Doctrine\Persistence\ManagerRegistry;
-use App\Entity\Film;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Form\Extension\Core\Type\FileType;
-use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -19,26 +17,30 @@ class uploadFilm extends AbstractController
      * @Route("/upload", name="upload")
      */
 
-    public function upload(ManagerRegistry $doctrine, FormBuilderInterface $builder, Request $request) 
+    public function upload(Request $request) : Response
     {
-        $text = "hello"; 
 
         $form = $this->createFormBuilder()
-            ->add('password', TextType::class) 
-             ->add('submitForm', SubmitType::class, ['label'=>'delete film '])
-             ->getForm()
-        ; 
+            ->add('nom', TextType::class)
+            ->add ('submit', SubmitType::class, ['label'=>'upload'])
+            ->getForm(); 
+            ;
 
+        $form->handleRequest($request);
 
-        $form ->handleRequest($request);
-
-        if($form->isSubmitted() && $form->isValid())
+        if ($form->isSubmitted() && $form->isValid())
         {
-            $data=$form->getData(); 
             return $this->redirectToRoute('home');
         }
 
-        return $this->render('details/description.html.twig', ['upload' => $form->createView()]);
+        // return $this->render('form/form.html.twig', [
+        //     'formFilm' => $form->createView()
+        // ]);
+
+        // return new Response('hello');
+        return $this->render('upload/upload.html.twig', [
+            'uploadFilm'=>$form->createView()
+        ]);
 
     }
 
