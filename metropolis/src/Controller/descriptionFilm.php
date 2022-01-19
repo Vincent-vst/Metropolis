@@ -14,14 +14,16 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Response;
 
 
-   class descriptionFilm extends AbstractController{
+   class descriptionFilm extends AbstractController
+   {
      /**
      * @Route("/details/{id}", name="description")
      * @Route("/", name="home")
      */
 
 
-    public function show( ManagerRegistry $doctrine, $id, Request $request, EntityManagerInterface $em): Response {
+    public function show( ManagerRegistry $doctrine, $id, Request $request, EntityManagerInterface $em): Response 
+    {
         $film = $doctrine->getRepository(Film::class)->find($id);
 
         $form = $this->createFormBuilder()
@@ -33,14 +35,16 @@ use Symfony\Component\HttpFoundation\Response;
 
         $form ->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid()){
+        if($form->isSubmitted() && $form->isValid())
+        {
             $data=$form->getData(); 
-            if($data['password']=="1234"){
+            if($data['password']=="1234")
+            {
                $em->remove($film); 
                $em ->flush(); 
                return $this->redirectToRoute('home');
             } 
-           }
+         }
 
         return $this->render('details/description.html.twig', ['film' => $film, 'deleteFilm' => $form->createView()]);
 

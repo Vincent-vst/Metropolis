@@ -3,7 +3,8 @@ namespace App\Controller;
 
 
 class searchFilm  {
-    public static function search ($nomFilm) {
+    public static function search ($nomFilm) 
+    {
         $descriptionFilm = NULL;
         $apiKey = '3830c4bd'; 
          
@@ -11,9 +12,11 @@ class searchFilm  {
          
         $response = file_get_contents($url);
 
-        try{
+        try
+        {
             $descriptionFilm = json_decode($response,true)["Plot"];
-        }catch (\Exception $e){
+        }catch (\Exception $e)
+        {
             error_log($e->getMessage());
         }
 

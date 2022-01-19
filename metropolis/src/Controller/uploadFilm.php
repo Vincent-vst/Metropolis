@@ -32,10 +32,11 @@ class uploadFilm extends AbstractController
 
         $form ->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid()){
+        if($form->isSubmitted() && $form->isValid())
+        {
             $data=$form->getData(); 
-          return $this->redirectToRoute('home');
-           }
+            return $this->redirectToRoute('home');
+        }
 
         return $this->render('details/description.html.twig', ['upload' => $form->createView()]);
 
