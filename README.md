@@ -23,6 +23,7 @@ __usage :__
 > npm run dev  # or npm run watch 
 ````
 
+> .env is in prod btw... 
 
 ## Consignes     
   
