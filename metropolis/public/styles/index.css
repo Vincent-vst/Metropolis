@@ -31,7 +31,7 @@ header{
 	/* border : 1px dashed green; */ 
 	display : flex; 
 	justify-content : space-between; 
-	margin : 20px; 
+	margin : 20px 50px 0 50px; 
 	color : var(--font);
 }
 
@@ -85,9 +85,19 @@ header .menu p {
 }
 
 .title .image{
-	/* border : 1px dashed orange; */ 
+	/* border : 1px dashed orange;  */
 	width : 400px; 
 	height : 400px; 
+	display : flex; 
+	justify-content: center;
+	align-items: center;
+}
+
+.title .image img{
+	/* border : 1px solid red;  */
+	transform: scale(1.10);
+	-ms-transform: scale(1.10);
+	-webkit-transform: scale(1.10);
 }
 
 .title .text .button {

@@ -6,12 +6,21 @@ It's also using IMDBApi in order to fill the description field.
 
 ## Usage 
 
-Password to delete films is `1234`.   
+Password to delete films is `1234`.  
 
-__commands :__   
+
+## Installation   
+
+__installation :__
+```
+> composer install
+> npm install 
+```
+
+__usage :__   
 ```` 
-> npm run dev  # or npm run watch 
 > symfony server:start -d 
+> npm run dev  # or npm run watch 
 ````
 
 
