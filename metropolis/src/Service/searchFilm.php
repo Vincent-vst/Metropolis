@@ -8,7 +8,7 @@ class searchFilm  {
     {
         $descriptionFilm = NULL;
         $apiKey = '3830c4bd'; 
-         
+        // modify $nomFilm and trim the " "
         $url = "http://www.omdbapi.com/?apikey=" . $apiKey . "&t=" . $nomFilm;
          
         $response = file_get_contents($url);
