@@ -28,5 +28,5 @@ __usage :__
 ## Presentation 
 
 ![frontpage](./metropolis/public/images/readme1.png)
-![addfilm](./metropolis/public/images/readme2.png)
+![addfilm](./metropolis/public/images/reamde2.png)
 ![description](./metropolis/public/images/readme3.png)
