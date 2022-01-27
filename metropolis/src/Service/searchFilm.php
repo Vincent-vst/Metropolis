@@ -12,7 +12,9 @@ class searchFilm  {
         $descriptionFilm = NULL;
         $apiKey = '3830c4bd'; 
 
-        // modify $nomFilm and trim the " "
+        // remove blank space from film name 
+        $nomFilm = str_replace(' ', '', $nomFilm);
+
         $url = "http://www.omdbapi.com/?apikey=" . $apiKey . "&t=" . $nomFilm;
          
         $response = file_get_contents($url);
