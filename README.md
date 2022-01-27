@@ -27,12 +27,26 @@ __usage :__
 
 ## Presentation 
 
+<details>
+<summary>Website pictures</summary>
+<br>
+
 - Homepage 
-![frontpage](./metropolis/public/images/readme1.png)   
+![frontpage](./metropolis/public/images/readme1.png)  
+<br>
+
 - Form   
 ![addfilm](./metropolis/public/images/reamde2.png)   
+<br>
+
+
 - Film description   
 ![description](./metropolis/public/images/readme3.png)  
+<br>
+</details>
+
+ 
+
  
 
 <details open>
