@@ -27,6 +27,15 @@ __usage :__
 
 ## Presentation 
 
-![frontpage](./metropolis/public/images/readme1.png)
-![addfilm](./metropolis/public/images/reamde2.png)
-![description](./metropolis/public/images/readme3.png)
+- Homepage 
+![frontpage](./metropolis/public/images/readme1.png)   
+- Form   
+![addfilm](./metropolis/public/images/reamde2.png)   
+- Film description   
+![description](./metropolis/public/images/readme3.png)  
+
+## Technologies  
+
+
+
+![image]({https://img.shields.io/badge/Symfony-000000?style=for-the-badge&logo=Symfony&logoColor=white})
