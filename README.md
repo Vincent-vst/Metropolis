@@ -33,8 +33,7 @@ __usage :__
 ![addfilm](./metropolis/public/images/reamde2.png)   
 - Film description   
 ![description](./metropolis/public/images/readme3.png)  
-
-## Technologies  
+ 
 
 <details open>
 <summary>Technologies</summary>

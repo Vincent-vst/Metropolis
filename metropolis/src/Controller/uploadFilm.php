@@ -33,11 +33,7 @@ class uploadFilm extends AbstractController
             return $this->redirectToRoute('home');
         }
 
-        // return $this->render('form/form.html.twig', [
-        //     'formFilm' => $form->createView()
-        // ]);
 
-        // return new Response('hello');
         return $this->render('upload/upload.html.twig', [
             'uploadFilm'=>$form->createView()
         ]);

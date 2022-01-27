@@ -20,9 +20,10 @@ class homeFilm extends AbstractController
      * @Route("/", name="home")
      */
 
+    // return all films of the database, sorting them by name and note
     public function show(ManagerRegistry $doctrine): Response
     {
-        // $film = $doctrine->getRepository(Film::class)->findAll();
+
         $film = $doctrine->getRepository(Film::class)->findBy([], ['note' => 'DESC','nom' => 'ASC']);
         
 

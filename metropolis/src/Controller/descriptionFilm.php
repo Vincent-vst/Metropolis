@@ -38,6 +38,8 @@ use Symfony\Component\HttpFoundation\Response;
         if($form->isSubmitted() && $form->isValid())
         {
             $data=$form->getData(); 
+
+            //delete film if password is set to 1234
             if($data['password']==$this->getParameter('code')) // move password to symfony parameter
             {
                $em->remove($film); 

@@ -44,7 +44,7 @@ class formFilm extends AbstractController
 
         $form ->handleRequest($request);
 
-
+        //Add film to the database
         if($form->isSubmitted() && $form->isValid())
         {
 
@@ -53,12 +53,11 @@ class formFilm extends AbstractController
            
             $description = searchFilm::search($data['nom']);
 
+            // throw errors if the description couldn't be found
             if (is_null($description))
             {
                 throw $this->createNotFoundException("Sorry, we couldn't retrieve the desription for this movie"); 
-                /* return $this->redirectToRoute('../../templates/error/filmNotFound.html.twig'); */
-                /* echo "error, film not found"; */
-                // $description = "error, film not found";
+
             }
 
             $film = new Film; 
