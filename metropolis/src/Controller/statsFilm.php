@@ -6,6 +6,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use CMEN\GoogleChartsBundle\GoogleCharts\Charts\PieChart;
 use Doctrine\Persistence\ManagerRegistry;
 use App\Entity\Film;
+use Doctrine\ORM\EntityManager;
 use Symfony\Component\HttpFoundation\Response;
 
 class statsFilm extends AbstractController
@@ -15,7 +16,7 @@ class statsFilm extends AbstractController
      * @Route("/stats", name="stats")
      */
 
-    public function show(ManagerRegistry $doctrine): Response
+    public function show(ManagerRegistry $doctrine, EntityManager $em): Response
     {
 
         //At first, i wanted to use https://packagist.org/packages/cmen/google-charts-bundle 
